@@ -13,7 +13,7 @@ extension XCTestCase {
         }
     }
 
-    func XCTAssertEqualOptional<T: Equatable>(actual: @autoclosure () -> T?, _ expected: @autoclosure () -> T, file: String = #file, line: UInt = #line) {
+    func XCTAssertEqualOptional<T: Equatable>(actual: @autoclosure () -> T?, expected: @autoclosure () -> T, file: String = #file, line: UInt = #line) {
         if let a = actual() {
             let e = expected()
             if a != e {
@@ -24,7 +24,7 @@ extension XCTestCase {
         self.recordFailure(withDescription: "Actual Optional value is empty", inFile: file, atLine: line, expected: true)
     }
 
-    func XCTAssertEqualOptional<T: Equatable>(actual: @autoclosure () -> T?, _ expected: @autoclosure () -> T?, file: String = #file, line: UInt = #line) {
+    func XCTAssertEqualOptional<T: Equatable>(actual: @autoclosure () -> T?, expected: @autoclosure () -> T?, file: String = #file, line: UInt = #line) {
         if actual() == nil {
             self.recordFailure(withDescription: "Actual Optional value is empty", inFile: file, atLine: line, expected: true)
         }
