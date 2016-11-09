@@ -1,2 +1,3 @@
 # XCTestCase
-Some extensions for dealing with optionals.
+
+Some extensions for dealing with Optionals.
